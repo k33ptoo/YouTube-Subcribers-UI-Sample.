@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="530.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_subsmonitor.MainController">
+   <children>
+      <AnchorPane fx:id="subs" prefHeight="200.0" prefWidth="530.0" style="-fx-background-color: #1C1C1C;">
+         <children>
+            <Label layoutX="169.0" layoutY="52.0" text="3000+" textFill="#e62117">
+               <font>
+                  <Font name="System Bold" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="140.0" text="Refreshed each second" textFill="#e5201999">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="exit" layoutX="512.0" onMousePressed="#handleButtonAction" prefHeight="27.0" prefWidth="18.0" text="X" textFill="#e52019dc">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="signin" prefHeight="200.0" prefWidth="530.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="329.0">
+               <children>
+                  <JFXTextField focusColor="#e62117" layoutX="48.0" layoutY="55.0" prefHeight="25.0" prefWidth="233.0" promptText="Email" unFocusColor="#e62117" />
+                  <JFXPasswordField focusColor="#e62117" layoutX="48.0" layoutY="98.0" prefHeight="25.0" prefWidth="233.0" promptText="Password" unFocusColor="#e62117" />
+                  <JFXButton fx:id="btn_signin" layoutX="103.0" layoutY="146.0" onAction="#handleSignin" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #E62117; -fx-background-radius: 5em;" text="Sign In" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="331.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #111111;">
+               <children>
+                  <Pane opacity="0.48" prefHeight="200.0" prefWidth="207.0" style="-fx-background-color: #1C1C1C;">
+                     <children>
+                        <ImageView layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/youtube.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label fx:id="exit1" layoutX="184.0" layoutY="-1.0" onMousePressed="#handleButtonAction" prefHeight="27.0" prefWidth="18.0" text="X" textFill="#e52019dc">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="65.0" text="Sign In Now" textFill="#c9c4c4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="91.0" text="Monitor your YouTube &#10;Subs Realtime" textAlignment="CENTER" textFill="#c9c4c4">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
